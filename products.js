@@ -1,0 +1,61 @@
+const products = [
+  {
+    id: 1,
+    code: "BL-001",
+    name: "Blusa Blanca Essential",
+    category: "Blusas",
+    style: "Elegante",
+    price: 39.90,
+    size: "M",
+    collection: "ELANA",
+    origin: "SHEIN",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=800&q=80",
+    description: "Blusa blanca versátil y femenina, ideal para crear looks elegantes y atemporales."
+  },
+
+  {
+    id: 2,
+    code: "CR-001",
+    name: "Cárdigan Soft Rose",
+    category: "Cárdigans",
+    style: "Romántica",
+    price: 49.90,
+    size: "M",
+    collection: "ELANA",
+    origin: "American",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80",
+    description: "Cárdigan suave en tono femenino, perfecto para looks delicados y sofisticados."
+  },
+
+  {
+    id: 3,
+    code: "AB-001",
+    name: "Abrigo Classic",
+    category: "Abrigos",
+    style: "Sofisticada",
+    price: 89.90,
+    size: "M",
+    collection: "ELANA",
+    origin: "Cider",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80",
+    description: "Abrigo de inspiración clásica para elevar un look cotidiano."
+  },
+
+  {
+    id: 4,
+    code: "CA-001",
+    name: "Cartera Vintage",
+    category: "Carteras",
+    style: "Old Money",
+    price: 59.90,
+    size: "Única",
+    collection: "ELANA",
+    origin: "Second Life",
+    status: "available",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    description: "Cartera con carácter vintage para completar un look elegante y atemporal."
+  }
+];
