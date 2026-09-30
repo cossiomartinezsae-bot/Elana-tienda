@@ -7,11 +7,23 @@ const products = [
     style: "Elegante",
     price: 39.90,
     size: "M",
+
+    measurements: {
+      shoulders: "38 cm",
+      bust: "96 cm",
+      waist: "90 cm",
+      length: "61 cm",
+      sleeve: "58 cm"
+    },
+
     collection: "ELANA",
     origin: "SHEIN",
     status: "available",
+
     image: "https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=800&q=80",
-    description: "Blusa blanca versátil y femenina, ideal para crear looks elegantes y atemporales."
+
+    description:
+      "Blusa blanca versátil y femenina, ideal para crear looks elegantes y atemporales."
   },
 
   {
@@ -22,11 +34,23 @@ const products = [
     style: "Romántica",
     price: 49.90,
     size: "M",
+
+    measurements: {
+      shoulders: "39 cm",
+      bust: "98 cm",
+      waist: "94 cm",
+      length: "60 cm",
+      sleeve: "59 cm"
+    },
+
     collection: "ELANA",
     origin: "American",
     status: "available",
+
     image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80",
-    description: "Cárdigan suave en tono femenino, perfecto para looks delicados y sofisticados."
+
+    description:
+      "Cárdigan suave en tono femenino, perfecto para looks delicados y sofisticados."
   },
 
   {
@@ -37,11 +61,23 @@ const products = [
     style: "Sofisticada",
     price: 89.90,
     size: "M",
+
+    measurements: {
+      shoulders: "40 cm",
+      bust: "102 cm",
+      waist: "98 cm",
+      length: "88 cm",
+      sleeve: "60 cm"
+    },
+
     collection: "ELANA",
     origin: "Cider",
     status: "available",
+
     image: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80",
-    description: "Abrigo de inspiración clásica para elevar un look cotidiano."
+
+    description:
+      "Abrigo de inspiración clásica para elevar un look cotidiano."
   },
 
   {
@@ -52,10 +88,20 @@ const products = [
     style: "Old Money",
     price: 59.90,
     size: "Única",
+
+    measurements: {
+      width: "28 cm",
+      height: "20 cm",
+      depth: "9 cm"
+    },
+
     collection: "ELANA",
     origin: "Second Life",
     status: "available",
+
     image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
-    description: "Cartera con carácter vintage para completar un look elegante y atemporal."
+
+    description:
+      "Cartera con carácter vintage para completar un look elegante y atemporal."
   }
 ];
