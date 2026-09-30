@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELANA | Estilo que habla de ti</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f4ee;
+      color: #17243a;
+    }
+
+    header {
+      background: #17243a;
+      color: #f8f4ee;
+      padding: 24px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      letter-spacing: 5px;
+    }
+
+    .slogan {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #d8a0a0;
+    }
+
+    nav a {
+      color: #f8f4ee;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(248,244,238,.78), rgba(248,244,238,.78)),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 7vw, 78px);
+      letter-spacing: 8px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #17243a;
+      color: white;
+      padding: 14px 30px;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .category {
+      background: #17243a;
+      color: white;
+      padding: 45px 15px;
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 19px;
+      letter-spacing: 1px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      padding-bottom: 20px;
+    }
+
+    .product-image {
+      height: 300px;
+      background: #e5ddd5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-name {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .product-code {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .second-life {
+      background: #d8a0a0;
+      color: #17243a;
+      text-align: center;
+    }
+
+    .second-life h2 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .second-life p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #17243a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer h2 {
+      font-family: Georgia, serif;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #d8a0a0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .categories,
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .categories,
+      .products {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <div class="logo">ELANA</div>
+    <div class="slogan">ESTILO QUE HABLA DE TI</div>
+  </div>
+
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#productos">PRODUCTOS</a>
+    <a href="#secondlife">SECOND LIFE</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div>
+    <h1>ELANA</h1>
+    <p>Estilo que habla de ti.</p>
+    <a class="button" href="#productos">DESCUBRIR COLECCIÓN</a>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">DESCUBRE TU ESTILO</h2>
+
+  <div class="categories">
+    <div class="category">ELEGANTE</div>
+    <div class="category">ROMÁNTICA</div>
+    <div class="category">CASUAL</div>
+    <div class="category">SOFISTICADA</div>
+  </div>
+</section>
+
+<section id="productos">
+  <h2 class="section-title">RECIÉN LLEGADOS</h2>
+
+  <div class="products">
+
+    <div class="product">
+      <div class="product-image">IMAGEN DEL PRODUCTO</div>
+      <div class="product-info">
+        <div class="product-name">Blusa Blanca Essential</div>
+        <div class="product-code">Código: BL-001</div>
+        <div class="price">S/ 39.90</div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-image">IMAGEN DEL PRODUCTO</div>
+      <div class="product-info">
+        <div class="product-name">Cárdigan Soft Rose</div>
+        <div class="product-code">Código: CR-001</div>
+        <div class="price">S/ 49.90</div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-image">IMAGEN DEL PRODUCTO</div>
+      <div class="product-info">
+        <div class="product-name">Abrigo Classic</div>
+        <div class="product-code">Código: AB-001</div>
+        <div class="price">S/ 89.90</div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-image">IMAGEN DEL PRODUCTO</div>
+      <div class="product-info">
+        <div class="product-name">Cartera Vintage</div>
+        <div class="product-code">Código: CA-001</div>
+        <div class="price">S/ 59.90</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="second-life" id="secondlife">
+  <h2>SECOND LIFE</h2>
+
+  <p>
+    Prendas seleccionadas que vuelven a tener una historia.
+    Piezas recuperadas, cuidadas y preparadas para encontrar
+    nuevamente a quien las haga parte de su estilo.
+  </p>
+
+  <a class="button" href="#productos">DESCUBRIR</a>
+</section>
+
+<section>
+  <h2 class="section-title">REWORK</h2>
+
+  <p style="text-align:center; max-width:650px; margin:auto; line-height:1.8;">
+    Piezas transformadas, intervenidas y reinventadas.
+    Porque en ELANA creemos que una prenda puede tener
+    más de una vida.
+  </p>
+</section>
+
+<footer id="contacto">
+  <h2>ELANA</h2>
+  <p>Estilo que habla de ti.</p>
+  <br>
+  <p>Moda · Estilo · Second Life · Rework</p>
+</footer>
+
+</body>
+</html>
