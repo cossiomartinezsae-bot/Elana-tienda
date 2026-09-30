@@ -860,11 +860,13 @@
             : ""
           }
 
-          <img
-            class="product-image"
-            src="${product.image}"
-            alt="${product.name}"
-          >
+        <a href="producto.html?id=${product.id}">
+  <img
+    class="product-image"
+    src="${product.image}"
+    alt="${product.name}"
+  >
+</a>
 
           <div class="product-info">
 
@@ -872,9 +874,11 @@
               ${product.category}
             </div>
 
-            <div class="product-name">
-              ${product.name}
-            </div>
+          <div class="product-name">
+  <a href="producto.html?id=${product.id}">
+    ${product.name}
+  </a>
+</div>
 
             <div class="product-code">
               Código: ${product.code}
