@@ -49,7 +49,7 @@ const products = [
     origin: "American",
     status: "available",
 
-    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80",
+    image: "https://placehold.co/800x1000/F8F5F0/17233D?text=ELANA+CR-001",
 
     description:
       "Cárdigan suave en tono femenino, perfecto para looks delicados y sofisticados."
@@ -77,7 +77,7 @@ const products = [
     origin: "Cider",
     status: "available",
 
-    image: "https://images.unsplash.com/photo-1548624313-0396c75ce2b8?auto=format&fit=crop&w=800&q=80",
+    image: "https://placehold.co/800x1000/F8F5F0/17233D?text=ELANA+AB-001",
 
     description:
       "Abrigo de inspiración clásica para elevar un look cotidiano."
