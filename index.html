@@ -3,9 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ELANA | Estilo que habla de ti</title>
 
+  <meta
+    name="description"
+    content="ELANA — Moda femenina, prendas seleccionadas y estilo que habla de ti."
+  >
+
   <style>
+    :root {
+      --ivory: #f8f4ed;
+      --navy: #18233b;
+      --rose: #b98286;
+      --gold: #b59a68;
+      --white: #ffffff;
+      --text: #252525;
+      --soft: #eee8df;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,88 +29,163 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f8f4ee;
-      color: #17243a;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--ivory);
+      color: var(--text);
     }
 
+    h1,
+    h2,
+    h3,
+    .logo {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    /* HEADER */
+
     header {
-      background: #17243a;
-      color: #f8f4ee;
-      padding: 24px 7%;
+      background: var(--ivory);
+      border-bottom: 1px solid #ded7cc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
-      font-family: Georgia, serif;
-      font-size: 32px;
+      color: var(--navy);
+      font-size: 30px;
       letter-spacing: 5px;
     }
 
-    .slogan {
-      font-size: 12px;
-      letter-spacing: 2px;
-      color: #d8a0a0;
+    .tagline {
+      font-size: 11px;
+      color: var(--rose);
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
     }
 
     nav a {
-      color: #f8f4ee;
       text-decoration: none;
-      margin-left: 24px;
+      color: var(--navy);
       font-size: 13px;
-      letter-spacing: 1px;
     }
 
+    .cart-button {
+      border: 1px solid var(--navy);
+      background: transparent;
+      color: var(--navy);
+      padding: 10px 15px;
+      border-radius: 3px;
+    }
+
+    .cart-count {
+      display: inline-block;
+      min-width: 20px;
+      margin-left: 4px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+
     .hero {
-      min-height: 480px;
+      min-height: 570px;
+      background:
+        linear-gradient(
+          rgba(24, 35, 59, 0.35),
+          rgba(24, 35, 59, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 20px;
-      background:
-        linear-gradient(rgba(248,244,238,.78), rgba(248,244,238,.78)),
-        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      color: white;
+      max-width: 700px;
+    }
+
+    .hero-small {
+      letter-spacing: 5px;
+      font-size: 12px;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(42px, 7vw, 78px);
-      letter-spacing: 8px;
-      margin-bottom: 15px;
+      font-size: clamp(50px, 9vw, 95px);
+      letter-spacing: 12px;
+      font-weight: normal;
     }
 
     .hero p {
       font-family: Georgia, serif;
-      font-size: 20px;
-      font-style: italic;
-      margin-bottom: 30px;
+      font-size: 22px;
+      margin: 12px 0 30px;
     }
 
-    .button {
+    .hero-button {
       display: inline-block;
-      background: #17243a;
-      color: white;
-      padding: 14px 30px;
+      background: var(--ivory);
+      color: var(--navy);
+      padding: 15px 30px;
       text-decoration: none;
       letter-spacing: 2px;
       font-size: 12px;
+      border: none;
     }
+
+    /* SECTION */
 
     section {
-      padding: 70px 7%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 75px 25px;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
-      font-family: Georgia, serif;
-      font-size: 32px;
       margin-bottom: 40px;
-      letter-spacing: 2px;
     }
+
+    .section-heading span {
+      color: var(--rose);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 38px;
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    /* CATEGORIES */
 
     .categories {
       display: grid;
@@ -103,14 +194,55 @@
     }
 
     .category {
-      background: #17243a;
-      color: white;
-      padding: 45px 15px;
+      border: 1px solid #d8d0c5;
+      padding: 35px 15px;
       text-align: center;
-      font-family: Georgia, serif;
-      font-size: 19px;
-      letter-spacing: 1px;
+      background: rgba(255,255,255,0.35);
+      transition: 0.25s;
     }
+
+    .category:hover {
+      transform: translateY(-3px);
+      border-color: var(--rose);
+    }
+
+    .category h3 {
+      color: var(--navy);
+      font-weight: normal;
+      font-size: 22px;
+    }
+
+    .category p {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* FILTERS */
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .filter {
+      border: 1px solid #cfc6b9;
+      background: transparent;
+      padding: 10px 17px;
+      color: var(--navy);
+      font-size: 12px;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* PRODUCTS */
 
     .products {
       display: grid;
@@ -120,97 +252,327 @@
 
     .product {
       background: white;
-      padding-bottom: 20px;
+      position: relative;
+      overflow: hidden;
     }
 
     .product-image {
-      height: 300px;
-      background: #e5ddd5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 13px;
-      letter-spacing: 1px;
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      display: block;
     }
 
     .product-info {
       padding: 18px;
     }
 
+    .product-category {
+      color: var(--rose);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
     .product-name {
+      color: var(--navy);
       font-family: Georgia, serif;
-      font-size: 18px;
-      margin-bottom: 8px;
+      font-size: 19px;
+      margin: 6px 0;
     }
 
     .product-code {
-      font-size: 11px;
+      font-size: 10px;
       color: #888;
-      margin-bottom: 12px;
+    }
+
+    .product-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
     }
 
     .price {
+      color: var(--navy);
       font-weight: bold;
-      font-size: 17px;
     }
 
+    .size {
+      font-size: 11px;
+      color: #777;
+    }
+
+    .add-button {
+      width: 100%;
+      margin-top: 15px;
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: white;
+      padding: 12px;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .add-button:hover {
+      background: var(--rose);
+      border-color: var(--rose);
+    }
+
+    .sold {
+      opacity: 0.55;
+    }
+
+    .sold-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--navy);
+      color: white;
+      padding: 7px 10px;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* SECOND LIFE */
+
     .second-life {
-      background: #d8a0a0;
-      color: #17243a;
+      background: var(--navy);
+      color: white;
+      max-width: none;
+    }
+
+    .second-life-inner {
+      max-width: 900px;
+      margin: auto;
       text-align: center;
+      padding: 75px 25px;
     }
 
     .second-life h2 {
-      font-family: Georgia, serif;
-      font-size: 38px;
-      margin-bottom: 15px;
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 18px;
     }
 
     .second-life p {
+      line-height: 1.8;
+      color: #eee;
       max-width: 650px;
-      margin: 0 auto 25px;
+      margin: auto;
+    }
+
+    /* REWORK */
+
+    .rework {
+      background: #efe5df;
+      max-width: none;
+    }
+
+    .rework-inner {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .rework h2 {
+      color: var(--navy);
+      font-size: 40px;
+      font-weight: normal;
+    }
+
+    .rework p {
+      max-width: 650px;
+      margin: 18px auto 0;
       line-height: 1.7;
     }
 
-    footer {
-      background: #17243a;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
+    /* CART */
+
+    .cart-panel {
+      position: fixed;
+      top: 0;
+      right: -430px;
+      width: min(430px, 100%);
+      height: 100vh;
+      background: white;
+      z-index: 1000;
+      box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
     }
 
-    footer h2 {
+    .cart-panel.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 22px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-header h2 {
+      color: var(--navy);
+      font-weight: normal;
+    }
+
+    .close-cart {
+      border: none;
+      background: none;
+      font-size: 25px;
+      color: var(--navy);
+    }
+
+    .cart-items {
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    .cart-item img {
+      width: 70px;
+      height: 85px;
+      object-fit: cover;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-info h4 {
+      color: var(--navy);
       font-family: Georgia, serif;
-      letter-spacing: 5px;
-      margin-bottom: 10px;
+      font-weight: normal;
+    }
+
+    .cart-item-info p {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #777;
+    }
+
+    .remove-item {
+      margin-top: 8px;
+      border: none;
+      background: none;
+      color: var(--rose);
+      font-size: 11px;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .whatsapp-button {
+      width: 100%;
+      border: none;
+      background: #244c37;
+      color: white;
+      padding: 15px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      color: #888;
+      padding: 50px 10px;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    footer .logo {
+      color: white;
+      font-size: 25px;
     }
 
     footer p {
-      color: #d8a0a0;
-      font-size: 13px;
+      font-size: 11px;
+      color: #ddd;
+      margin-top: 10px;
     }
 
-    @media (max-width: 800px) {
-      header {
-        flex-direction: column;
-        gap: 18px;
-      }
+    /* MOBILE */
 
-      nav a {
-        margin: 0 7px;
-      }
-
-      .categories,
+    @media (max-width: 900px) {
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav a {
+        display: none;
+      }
     }
 
-    @media (max-width: 500px) {
-      .categories,
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 15px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+        letter-spacing: 7px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 55px 15px;
+      }
+
       .products {
         grid-template-columns: 1fr;
+      }
+
+      .categories {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .product-image {
+        height: 390px;
       }
     }
   </style>
@@ -218,111 +580,635 @@
 
 <body>
 
-<header>
-  <div>
+  <!-- HEADER -->
+
+  <header>
+    <div class="header-inner">
+
+      <div>
+        <div class="logo">ELANA</div>
+        <div class="tagline">ESTILO QUE HABLA DE TI</div>
+      </div>
+
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#second-life">Second Life</a>
+
+        <button class="cart-button" onclick="openCart()">
+          🛍 Carrito
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+
+        <div class="hero-small">
+          ESTILO · FEMINIDAD · PERSONALIDAD
+        </div>
+
+        <h1>ELANA</h1>
+
+        <p>Estilo que habla de ti.</p>
+
+        <a href="#coleccion" class="hero-button">
+          DESCUBRIR COLECCIÓN
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ESTILOS -->
+
+    <section>
+
+      <div class="section-heading">
+        <span>Encuentra tu esencia</span>
+        <h2>Descubre tu estilo</h2>
+      </div>
+
+      <div class="categories">
+
+        <button class="category" onclick="filterProducts('Elegante')">
+          <h3>Elegante</h3>
+          <p>Clásico y refinado</p>
+        </button>
+
+        <button class="category" onclick="filterProducts('Romántica')">
+          <h3>Romántica</h3>
+          <p>Femenino y delicado</p>
+        </button>
+
+        <button class="category" onclick="filterProducts('Casual')">
+          <h3>Casual</h3>
+          <p>Natural y versátil</p>
+        </button>
+
+        <button class="category" onclick="filterProducts('Sofisticada')">
+          <h3>Sofisticada</h3>
+          <p>Presencia y carácter</p>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- COLECCIÓN -->
+
+    <section id="coleccion">
+
+      <div class="section-heading">
+        <span>Selección ELANA</span>
+        <h2>La colección</h2>
+      </div>
+
+      <div class="filters">
+
+        <button class="filter active" onclick="filterProducts('Todos')">
+          Todos
+        </button>
+
+        <button class="filter" onclick="filterProducts('Blusas')">
+          Blusas
+        </button>
+
+        <button class="filter" onclick="filterProducts('Cárdigans')">
+          Cárdigans
+        </button>
+
+        <button class="filter" onclick="filterProducts('Abrigos')">
+          Abrigos
+        </button>
+
+        <button class="filter" onclick="filterProducts('Carteras')">
+          Carteras
+        </button>
+
+      </div>
+
+      <div class="products" id="productsContainer"></div>
+
+    </section>
+
+
+    <!-- SECOND LIFE -->
+
+    <section class="second-life" id="second-life">
+
+      <div class="second-life-inner">
+
+        <div class="section-heading">
+          <span style="color:#d4b2b5;">Una nueva historia</span>
+          <h2 style="color:white;">Second Life</h2>
+        </div>
+
+        <p>
+          Prendas seleccionadas que merecen una segunda oportunidad.
+          En ELANA creemos que el estilo también puede tener historia,
+          personalidad y propósito.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- REWORK -->
+
+    <section class="rework">
+
+      <div class="rework-inner">
+
+        <div class="section-heading">
+          <span>Transformar también es crear</span>
+          <h2>ELANA REWORK</h2>
+        </div>
+
+        <p>
+          Prendas que recuperamos, transformamos y reinventamos para
+          convertirlas en piezas únicas.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CARRITO -->
+
+  <aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+      <h2>Tu selección</h2>
+
+      <button class="close-cart" onclick="closeCart()">
+        ×
+      </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">S/ 0.00</span>
+      </div>
+
+      <button class="whatsapp-button" onclick="sendWhatsApp()">
+        FINALIZAR PEDIDO POR WHATSAPP
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
     <div class="logo">ELANA</div>
-    <div class="slogan">ESTILO QUE HABLA DE TI</div>
-  </div>
 
-  <nav>
-    <a href="#inicio">INICIO</a>
-    <a href="#productos">PRODUCTOS</a>
-    <a href="#secondlife">SECOND LIFE</a>
-    <a href="#contacto">CONTACTO</a>
-  </nav>
-</header>
-
-<section class="hero" id="inicio">
-  <div>
-    <h1>ELANA</h1>
     <p>Estilo que habla de ti.</p>
-    <a class="button" href="#productos">DESCUBRIR COLECCIÓN</a>
-  </div>
-</section>
 
-<section>
-  <h2 class="section-title">DESCUBRE TU ESTILO</h2>
+    <p>© 2026 ELANA. Todos los derechos reservados.</p>
 
-  <div class="categories">
-    <div class="category">ELEGANTE</div>
-    <div class="category">ROMÁNTICA</div>
-    <div class="category">CASUAL</div>
-    <div class="category">SOFISTICADA</div>
-  </div>
-</section>
+  </footer>
 
-<section id="productos">
-  <h2 class="section-title">RECIÉN LLEGADOS</h2>
 
-  <div class="products">
+  <!-- JAVASCRIPT -->
 
-    <div class="product">
-      <div class="product-image">IMAGEN DEL PRODUCTO</div>
-      <div class="product-info">
-        <div class="product-name">Blusa Blanca Essential</div>
-        <div class="product-code">Código: BL-001</div>
-        <div class="price">S/ 39.90</div>
-      </div>
-    </div>
+  <script src="products.js"></script>
 
-    <div class="product">
-      <div class="product-image">IMAGEN DEL PRODUCTO</div>
-      <div class="product-info">
-        <div class="product-name">Cárdigan Soft Rose</div>
-        <div class="product-code">Código: CR-001</div>
-        <div class="price">S/ 49.90</div>
-      </div>
-    </div>
+  <script>
 
-    <div class="product">
-      <div class="product-image">IMAGEN DEL PRODUCTO</div>
-      <div class="product-info">
-        <div class="product-name">Abrigo Classic</div>
-        <div class="product-code">Código: AB-001</div>
-        <div class="price">S/ 89.90</div>
-      </div>
-    </div>
+    let cart = JSON.parse(localStorage.getItem("elanaCart")) || [];
 
-    <div class="product">
-      <div class="product-image">IMAGEN DEL PRODUCTO</div>
-      <div class="product-info">
-        <div class="product-name">Cartera Vintage</div>
-        <div class="product-code">Código: CA-001</div>
-        <div class="price">S/ 59.90</div>
-      </div>
-    </div>
+    let currentFilter = "Todos";
 
-  </div>
-</section>
 
-<section class="second-life" id="secondlife">
-  <h2>SECOND LIFE</h2>
+    function renderProducts(list = products) {
 
-  <p>
-    Prendas seleccionadas que vuelven a tener una historia.
-    Piezas recuperadas, cuidadas y preparadas para encontrar
-    nuevamente a quien las haga parte de su estilo.
-  </p>
+      const container =
+        document.getElementById("productsContainer");
 
-  <a class="button" href="#productos">DESCUBRIR</a>
-</section>
+      container.innerHTML = "";
 
-<section>
-  <h2 class="section-title">REWORK</h2>
+      const availableProducts =
+        list.filter(product => product.status === "available");
 
-  <p style="text-align:center; max-width:650px; margin:auto; line-height:1.8;">
-    Piezas transformadas, intervenidas y reinventadas.
-    Porque en ELANA creemos que una prenda puede tener
-    más de una vida.
-  </p>
-</section>
+      const soldProducts =
+        list.filter(product => product.status === "sold");
 
-<footer id="contacto">
-  <h2>ELANA</h2>
-  <p>Estilo que habla de ti.</p>
-  <br>
-  <p>Moda · Estilo · Second Life · Rework</p>
-</footer>
+
+      const allProducts =
+        [...availableProducts, ...soldProducts];
+
+
+      if (allProducts.length === 0) {
+
+        container.innerHTML = `
+          <p style="
+            grid-column:1/-1;
+            text-align:center;
+            padding:50px;
+            color:#777;
+          ">
+            Próximamente encontrarás nuevas piezas en ELANA.
+          </p>
+        `;
+
+        return;
+      }
+
+
+      allProducts.forEach(product => {
+
+        const isSold =
+          product.status === "sold";
+
+
+        const card =
+          document.createElement("article");
+
+        card.className =
+          "product" + (isSold ? " sold" : "");
+
+
+        card.innerHTML = `
+
+          ${isSold
+            ? `<div class="sold-label">VENDIDO</div>`
+            : ""
+          }
+
+          <img
+            class="product-image"
+            src="${product.image}"
+            alt="${product.name}"
+          >
+
+          <div class="product-info">
+
+            <div class="product-category">
+              ${product.category}
+            </div>
+
+            <div class="product-name">
+              ${product.name}
+            </div>
+
+            <div class="product-code">
+              Código: ${product.code}
+            </div>
+
+            <div class="product-details">
+
+              <span class="price">
+                S/ ${product.price.toFixed(2)}
+              </span>
+
+              <span class="size">
+                Talla: ${product.size}
+              </span>
+
+            </div>
+
+            ${
+              isSold
+              ? `
+                <button
+                  class="add-button"
+                  disabled
+                  style="background:#aaa;border-color:#aaa;"
+                >
+                  PRENDA VENDIDA
+                </button>
+              `
+              : `
+                <button
+                  class="add-button"
+                  onclick="addToCart(${product.id})"
+                >
+                  AÑADIR AL CARRITO
+                </button>
+              `
+            }
+
+          </div>
+        `;
+
+
+        container.appendChild(card);
+
+      });
+
+    }
+
+
+    function filterProducts(filter) {
+
+      currentFilter = filter;
+
+
+      document
+        .querySelectorAll(".filter")
+        .forEach(button => {
+
+          button.classList.remove("active");
+
+          if (
+            button.textContent.trim()
+              .toLowerCase()
+              .includes(filter.toLowerCase())
+          ) {
+
+            button.classList.add("active");
+
+          }
+
+        });
+
+
+      let filtered;
+
+
+      if (filter === "Todos") {
+
+        filtered = products;
+
+      } else {
+
+        filtered =
+          products.filter(product =>
+            product.category === filter ||
+            product.style === filter
+          );
+
+      }
+
+
+      renderProducts(filtered);
+
+      document
+        .getElementById("coleccion")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+    function addToCart(id) {
+
+      const product =
+        products.find(product => product.id === id);
+
+
+      if (!product ||
+          product.status !== "available") {
+
+        return;
+
+      }
+
+
+      const alreadyInCart =
+        cart.some(item => item.id === id);
+
+
+      if (alreadyInCart) {
+
+        alert("Esta prenda ya está en tu selección.");
+
+        return;
+
+      }
+
+
+      cart.push(product);
+
+      saveCart();
+
+      updateCart();
+
+      openCart();
+
+    }
+
+
+    function removeFromCart(id) {
+
+      cart =
+        cart.filter(item => item.id !== id);
+
+      saveCart();
+
+      updateCart();
+
+    }
+
+
+    function saveCart() {
+
+      localStorage.setItem(
+        "elanaCart",
+        JSON.stringify(cart)
+      );
+
+    }
+
+
+    function updateCart() {
+
+      const container =
+        document.getElementById("cartItems");
+
+      const count =
+        document.getElementById("cartCount");
+
+      const total =
+        document.getElementById("cartTotal");
+
+
+      count.textContent =
+        cart.length;
+
+
+      if (cart.length === 0) {
+
+        container.innerHTML = `
+          <div class="empty-cart">
+            Tu selección está vacía.<br><br>
+            Descubre una pieza que hable de ti.
+          </div>
+        `;
+
+        total.textContent =
+          "S/ 0.00";
+
+        return;
+
+      }
+
+
+      container.innerHTML = "";
+
+
+      let totalAmount = 0;
+
+
+      cart.forEach(product => {
+
+        totalAmount += product.price;
+
+
+        const item =
+          document.createElement("div");
+
+        item.className =
+          "cart-item";
+
+
+        item.innerHTML = `
+
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+          >
+
+          <div class="cart-item-info">
+
+            <h4>
+              ${product.name}
+            </h4>
+
+            <p>
+              ${product.code} · Talla ${product.size}
+            </p>
+
+            <p>
+              S/ ${product.price.toFixed(2)}
+            </p>
+
+            <button
+              class="remove-item"
+              onclick="removeFromCart(${product.id})"
+            >
+              Eliminar
+            </button>
+
+          </div>
+
+        `;
+
+
+        container.appendChild(item);
+
+      });
+
+
+      total.textContent =
+        `S/ ${totalAmount.toFixed(2)}`;
+
+    }
+
+
+    function openCart() {
+
+      document
+        .getElementById("cartPanel")
+        .classList.add("open");
+
+    }
+
+
+    function closeCart() {
+
+      document
+        .getElementById("cartPanel")
+        .classList.remove("open");
+
+    }
+
+
+    function sendWhatsApp() {
+
+      if (cart.length === 0) {
+
+        alert(
+          "Agrega al menos una prenda a tu selección."
+        );
+
+        return;
+
+      }
+
+
+      let message =
+        "Hola ELANA ✨%0A%0A" +
+        "Quiero consultar por estas prendas:%0A%0A";
+
+
+      let total = 0;
+
+
+      cart.forEach(product => {
+
+        message +=
+          `• ${product.name} (${product.code}) - S/ ${product.price.toFixed(2)}%0A`;
+
+        total += product.price;
+
+      });
+
+
+      message +=
+        `%0ATotal: S/ ${total.toFixed(2)}%0A%0A` +
+        "Quisiera confirmar disponibilidad y forma de pago.";
+
+
+      /*
+        IMPORTANTE:
+        Aquí colocaremos el número real de WhatsApp
+        de ELANA cuando me lo proporciones.
+      */
+
+      const phone =
+        "51999999999";
+
+
+      window.open(
+        `https://wa.me/${phone}?text=${message}`,
+        "_blank"
+      );
+
+    }
+
+
+    renderProducts();
+
+    updateCart();
+
+  </script>
 
 </body>
 </html>
