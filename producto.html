@@ -1,1 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Producto | ELANA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f5f0;
+      color: #17233d;
+    }
+
+    header {
+      background: #17233d;
+      color: white;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 30px;
+      letter-spacing: 4px;
+    }
+
+    .tagline {
+      color: #e8a6ae;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .cart-link {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid #d7b56d;
+      padding: 10px 16px;
+      border-radius: 20px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 25px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #17233d;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .product-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      background: white;
+      padding: 35px;
+      border-radius: 4px;
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .product-info {
+      padding: 10px 5px;
+    }
+
+    .collection {
+      color: #b08a45;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      font-weight: normal;
+      margin: 0 0 10px;
+    }
+
+    .code {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .price {
+      font-size: 28px;
+      color: #17233d;
+      margin-bottom: 22px;
+    }
+
+    .details {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      margin-bottom: 25px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      font-size: 14px;
+    }
+
+    .detail-label {
+      color: #777;
+    }
+
+    .description {
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .measurements {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .measurements h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .measurement-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .measurement {
+      background: #f8f5f0;
+      padding: 11px;
+      font-size: 13px;
+    }
+
+    .measurement strong {
+      display: block;
+      color: #17233d;
+      margin-bottom: 4px;
+    }
+
+    .measurement-note {
+      font-size: 12px;
+      color: #777;
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+
+    .add-button {
+      width: 100%;
+      border: none;
+      background: #17233d;
+      color: white;
+      padding: 16px;
+      cursor: pointer;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-top: 25px;
+    }
+
+    .add-button:hover {
+      background: #25375b;
+    }
+
+    .sold {
+      background: #999;
+      cursor: not-allowed;
+    }
+
+    .message {
+      margin-top: 15px;
+      color: #b08a45;
+      font-size: 14px;
+      text-align: center;
+      min-height: 20px;
+    }
+
+    .not-found {
+      text-align: center;
+      background: white;
+      padding: 60px 30px;
+    }
+
+    .not-found h1 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin-top: 60px;
+      background: #17233d;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding: 18px 20px;
+      }
+
+      .product-detail {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      main {
+        margin: 25px auto;
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <div class="logo">ELANA</div>
+    <div class="tagline">Estilo que habla de ti</div>
+  </div>
+
+  <a href="index.html#coleccion" class="cart-link">
+    ← Colección
+  </a>
+</header>
+
+<main>
+
+  <a href="index.html#coleccion" class="back">
+    ← Volver a la colección
+  </a>
+
+  <div id="product-container"></div>
+
+</main>
+
+<footer>
+  ELANA · Estilo que habla de ti
+</footer>
+
+<script src="products.js"></script>
+
+<script>
+
+  const params = new URLSearchParams(window.location.search);
+  const productId = Number(params.get("id"));
+
+  const product = products.find(item => item.id === productId);
+
+  const container = document.getElementById("product-container");
+
+  const measurementLabels = {
+    shoulders: "Hombros",
+    bust: "Busto",
+    waist: "Cintura",
+    hip: "Cadera",
+    length: "Largo",
+    sleeve: "Manga",
+    rise: "Tiro",
+    inseam: "Entrepierna",
+    width: "Ancho",
+    height: "Alto",
+    depth: "Profundidad",
+    strap: "Correa"
+  };
+
+  if (!product) {
+
+    container.innerHTML = `
+      <div class="not-found">
+        <h1>Producto no encontrado</h1>
+        <p>Esta prenda puede haber sido retirada o el enlace no es válido.</p>
+        <br>
+        <a href="index.html#coleccion" class="cart-link">
+          Volver a ELANA
+        </a>
+      </div>
+    `;
+
+  } else {
+
+    const measurements = product.measurements || {};
+
+    const measurementHTML = Object.entries(measurements)
+      .map(([key, value]) => `
+        <div class="measurement">
+          <strong>${measurementLabels[key] || key}</strong>
+          ${value}
+        </div>
+      `)
+      .join("");
+
+    const isSold = product.status === "sold";
+
+    container.innerHTML = `
+
+      <section class="product-detail">
+
+        <div>
+          <img
+            class="product-image"
+            src="${product.image}"
+            alt="${product.name}"
+          >
+        </div>
+
+        <div class="product-info">
+
+          <div class="collection">
+            ${product.collection || "ELANA"}
+          </div>
+
+          <h1>${product.name}</h1>
+
+          <div class="code">
+            Código: ${product.code}
+          </div>
+
+          <div class="price">
+            S/ ${Number(product.price).toFixed(2)}
+          </div>
+
+          <div class="details">
+
+            <div class="detail-row">
+              <span class="detail-label">Talla de etiqueta</span>
+              <strong>${product.size || "Única"}</strong>
+            </div>
+
+            <div class="detail-row">
+              <span class="detail-label">Estilo</span>
+              <strong>${product.style || "ELANA"}</strong>
+            </div>
+
+            <div class="detail-row">
+              <span class="detail-label">Colección</span>
+              <strong>${product.collection || "ELANA"}</strong>
+            </div>
+
+            <div class="detail-row">
+              <span class="detail-label">Origen</span>
+              <strong>${product.origin || "ELANA"}</strong>
+            </div>
+
+          </div>
+
+          <div class="description">
+            ${product.description || ""}
+          </div>
+
+          ${
+            Object.keys(measurements).length > 0
+            ? `
+              <div class="measurements">
+
+                <h2>Medidas reales de la prenda</h2>
+
+                <div class="measurement-grid">
+                  ${measurementHTML}
+                </div>
+
+                <div class="measurement-note">
+                  Las medidas corresponden a la prenda tomada en plano.
+                  Pueden existir pequeñas variaciones de 1–2 cm.
+                  Te recomendamos compararlas con una prenda que te quede bien.
+                </div>
+
+              </div>
+            `
+            : ""
+          }
+
+          ${
+            isSold
+            ? `
+              <button class="add-button sold" disabled>
+                VENDIDO
+              </button>
+            `
+            : `
+              <button class="add-button" onclick="addToCart(${product.id})">
+                AÑADIR A MI SELECCIÓN
+              </button>
+
+              <div id="message" class="message"></div>
+            `
+          }
+
+        </div>
+
+      </section>
+
+    `;
+  }
+
+
+  function addToCart(productId) {
+
+    let cart = JSON.parse(localStorage.getItem("elanaCart")) || [];
+
+    const product = products.find(item => item.id === productId);
+
+    if (!product) return;
+
+    const alreadyExists = cart.some(item => item.id === productId);
+
+    if (!alreadyExists) {
+      cart.push(product);
+      localStorage.setItem("elanaCart", JSON.stringify(cart));
+    }
+
+    const message = document.getElementById("message");
+
+    if (message) {
+      message.innerHTML = alreadyExists
+        ? "Esta prenda ya está en tu selección."
+        : "✓ Prenda añadida a tu selección.";
+    }
+  }
+
+</script>
+
+</body>
+</html>
