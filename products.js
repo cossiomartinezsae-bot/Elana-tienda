@@ -1,4 +1,5 @@
 const products = [
+
   {
     id: 1,
     code: "BL-001",
@@ -20,11 +21,12 @@ const products = [
     origin: "SHEIN",
     status: "available",
 
-    image: "https://images.unsplash.com/photo-1605763240000-7e93b172d754?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
 
     description:
       "Blusa blanca versátil y femenina, ideal para crear looks elegantes y atemporales."
   },
+
 
   {
     id: 2,
@@ -53,6 +55,7 @@ const products = [
       "Cárdigan suave en tono femenino, perfecto para looks delicados y sofisticados."
   },
 
+
   {
     id: 3,
     code: "AB-001",
@@ -74,11 +77,12 @@ const products = [
     origin: "Cider",
     status: "available",
 
-    image: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1548624313-0396c75ce2b8?auto=format&fit=crop&w=800&q=80",
 
     description:
       "Abrigo de inspiración clásica para elevar un look cotidiano."
   },
+
 
   {
     id: 4,
@@ -95,7 +99,7 @@ const products = [
       depth: "9 cm"
     },
 
-    collection: "ELANA",
+    collection: "Second Life",
     origin: "Second Life",
     status: "available",
 
@@ -104,4 +108,5 @@ const products = [
     description:
       "Cartera con carácter vintage para completar un look elegante y atemporal."
   }
+
 ];
