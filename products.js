@@ -21,7 +21,7 @@ const products = [
     origin: "SHEIN",
     status: "available",
 
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
+    image: "https://placehold.co/800x1000/F8F5F0/17233D?text=ELANA+BL-001",
 
     description:
       "Blusa blanca versátil y femenina, ideal para crear looks elegantes y atemporales."
